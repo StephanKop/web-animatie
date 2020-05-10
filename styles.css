@@ -7,6 +7,8 @@ body {
     display: flex;
     justify-content: center;
     width: 45%;
+    min-height: 35em;
+    /*height: 70%;*/
     z-index: 1;
 }
 
@@ -78,6 +80,7 @@ body {
     margin: auto;
     background-color: orange;
     border-radius: 10em;
+    transform: scale(1);
 }
 
 .moon {
@@ -90,16 +93,17 @@ body {
     margin-top: -8em;
     margin-left: -10em;
     position: absolute;
+    transform: scale(0.75)
 }
 
 .moonrise {
     background-color: white;
-    transform: translate(10em, -10em);
+    transform: translate(10em, -10em) scale(1);
 }
 
 .sunset {
-    background-color: darkred;
-    transform: translate(10em, 10em);
+    background-color: #3a0000;
+    transform: translate(10em, 10em) scale(0.75);
 }
 
 .background-night {
