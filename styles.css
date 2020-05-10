@@ -1,0 +1,206 @@
+body {
+    background-color: #eef5e4;
+    transition: all 10s ease;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    z-index: 1;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    margin-right: 2em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.button svg {
+    width: 2em;
+    height: 2em;
+}
+
+.moonDark {
+    fill: white;
+}
+
+.transition {
+    transition: all 10s ease;
+}
+
+.artwork {
+    width: 100%;
+}
+
+.artwork svg {
+    width: 100%;
+}
+
+.cls-4 {
+    transition: all 0.5s ease;
+}
+
+.cls-4:hover {
+     fill: red;
+     width: 200%;
+     transform: skewX(10deg);
+     transform-origin: 100% 65%;
+ }
+
+.cls-3:hover {
+    fill: yellow;
+    width: 200%;
+    transform: skewX(10deg);
+    transform-origin: 100% 65%;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sun {
+    transition: all 10s ease;
+    width: 5em;
+    height: 5em;
+    margin: auto;
+    background-color: orange;
+    border-radius: 10em;
+}
+
+.moon {
+    transition: all 10s ease;
+    width: 5em;
+    height: 5em;
+    margin: auto;
+    background-color: lightgray;
+    border-radius: 10em;
+    margin-top: -8em;
+    margin-left: -10em;
+    position: absolute;
+}
+
+.moonrise {
+    background-color: white;
+    transform: translate(10em, -10em);
+}
+
+.sunset {
+    background-color: darkred;
+    transform: translate(10em, 10em);
+}
+
+.background-night {
+    background-color: rgb(0, 52, 74);
+}
+
+.image {
+    width: 100%;
+}
+
+@keyframes starsFlicker {
+    from { opacity: 0; }
+}
+
+.animate-flicker1 {
+    animation: starsFlicker 1s infinite alternate;
+}
+
+.animate-flicker2 {
+    animation: starsFlicker 2s infinite alternate;
+}
+
+.animate-flicker3 {
+    animation: starsFlicker 3s infinite alternate;
+}
+
+.animate-flicker4 {
+    animation: starsFlicker 4s infinite alternate;
+}
+
+.stars {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-top: -60em;
+}
+
+.star1 {
+    background-color: white;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 8em 5em 8em 5em;
+    border-radius: 10em;
+}
+
+.star2 {
+    background-color: white;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 5em 5em 5em 5em;
+    border-radius: 10em;
+}
+
+.star3 {
+    background-color: white;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 10em 5em 10em 5em;
+    border-radius: 10em;
+}
+
+.star4 {
+    background-color: white;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 13em 5em 13em 5em;
+    border-radius: 10em;
+}
+
+.hidden {
+    transition: all 10s ease;
+    opacity: 0;
+}
+
+.visible {
+    transition: all 10s ease;
+    opacity: 1;
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 812px){
+    .imgContainer {
+        width: 100%;
+    }
+
+    .maincontainer {
+        margin-top: 30em;
+    }
+
+    .moonrise {
+        background-color: white;
+        transform: translate(10em, -20em);
+    }
+
+    .sunset {
+        background-color: darkred;
+        transform: translate(15em, 20em);
+    }
+
+    .stars {
+        margin-top: -85em;
+    }
+}
