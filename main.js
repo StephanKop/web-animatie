@@ -31,3 +31,22 @@ function moonrise() {
 function sunrise() {
     document.getElementById("sun").classList.remove("sunset");
 };
+
+// document.getElementById("background").addEventListener("scroll", onscroll);
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        // document.getElementById("background").classList.add("scrollbackground");
+        // document.getElementById("background").classList.remove("background-night");
+        document.getElementById("layered-left").classList.add("layered-left-push");
+        document.getElementById("layered-left").classList.remove("layered-left");
+        document.getElementById("layered-right").classList.add("layered-right-push");
+        document.getElementById("layered-right").classList.remove("layered-right");
+        document.getElementById("imgcontainer").style.width = "90%";
+    }
+    else {
+        // document.getElementById("background").classList.remove("scrollbackground");
+    }
+}
