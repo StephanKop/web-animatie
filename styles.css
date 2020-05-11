@@ -102,8 +102,8 @@ body {
 }
 
 .sunset {
-    background-color: #3a0000;
-    transform: translate(10em, 10em) scale(0.75);
+    background-color: #23033a;
+    transform: translate(10em, 11em) scale(0.75);
 }
 
 .background-night {
@@ -206,5 +206,16 @@ body {
 
     .stars {
         margin-top: -85em;
+    }
+
+    .button {
+        width: 4em;
+        height: 4em;
+        margin-right: 4em;
+    }
+
+    .button svg {
+        width: 4em;
+        height: 4em;
     }
 }
