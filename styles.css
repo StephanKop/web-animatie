@@ -277,6 +277,11 @@ body {
     opacity: 0;
 }
 
+.hidden-fast {
+    transition: all 2s ease;
+    opacity: 0;
+}
+
 .visible {
     transition: all 10s ease;
     opacity: 1;
@@ -330,6 +335,7 @@ body {
         z-index: 20;
         margin-left: 10em;
         margin-top: 20em;
+        margin-bottom: 5em;
     }
 
     .layered-right-push {
@@ -340,3 +346,13 @@ body {
         margin-top: 5em;
     }
 }
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    .imgContainer {
+        width: 100%;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+}}
