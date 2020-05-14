@@ -173,9 +173,6 @@ body {
     transition: all 10s ease;
     width: 5em;
     height: 5em;
-    /*margin: auto;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
     background-color: lightgray;
     border-radius: 10em;
     margin-top: 8em;
@@ -184,9 +181,9 @@ body {
     transform: scale(0.75);
     opacity: 0;
     box-shadow:
-            0 0 20px 5px #fff,  /* inner white */
-            0 0 60px 15px #fff, /* middle magenta */
-            0 0 100px 30px #fff; /* outer cyan */
+            0 0 20px 5px #fff,
+            0 0 60px 15px #fff,
+            0 0 100px 30px #fff;
 }
 
 .moonrise {
@@ -208,6 +205,10 @@ body {
 .image {
     width: 100%;
 }
+
+/*#sea1 {*/
+/*    transform: translateY(20%);*/
+/*}*/
 
 @keyframes starsFlicker {
     from { opacity: 0; }
@@ -296,67 +297,87 @@ body {
         width: 100%;
         flex-direction: row-reverse;
         flex-wrap: wrap;
-        margin-top: -50em;
+        /*margin-top: -5em;*/
     }
 
     .maincontainer {
-        margin-top: 30em;
+        /*margin-top: 20em;*/
     }
 
     .moon {
         margin-top: 13em;
-        margin-left: -10em;
+        margin-left: -5em;
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .sun {
+        width: 2.5em;
+        height: 2.5em;
+        margin-top: 8em;
     }
 
     .moonrise {
         background-color: white;
-        transform: translate(10em, -20em);
+        transform: translate(5em, -10em);
     }
 
     .sunset {
         background-color: darkred;
-        transform: translate(15em, 20em);
+        transform: translate(6em, 10em);
     }
 
-    .stars {
-        margin-top: -35em;
+    .star1 {
+        margin: 2em 4em 2em 4em;
     }
 
-    .button {
-        width: 4em;
-        height: 4em;
-        margin-right: 4em;
+    .star2 {
+        margin: 4em 2em 4em 2em;
     }
 
-    .button svg {
-        width: 4em;
-        height: 4em;
+    .star3 {
+        margin: 3em 5em 3em 5em;
     }
+
+    .star4 {
+        margin: 1em 2em 1em 2em;
+    }
+
+    /*.stars {*/
+    /*    margin-top: -35em;*/
+    /*}*/
+
+    /*.button {*/
+    /*    width: 4em;*/
+    /*    height: 4em;*/
+    /*    margin-right: 4em;*/
+    /*}*/
+
+    /*.button svg {*/
+    /*    width: 4em;*/
+    /*    height: 4em;*/
+    /*}*/
 
     .layered-left-push {
         transition: all 2s ease;
         opacity: 1;
         z-index: 20;
-        margin-left: 10em;
-        margin-top: 20em;
+        /*margin-left: 10em;*/
+        /*margin-top: 2em;*/
         margin-bottom: 5em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
     }
 
     .layered-right-push {
         transition: all 2s ease;
         opacity: 1;
         z-index: 20;
-        margin-right: 10em;
+        /*margin-right: 10em;*/
         margin-top: 5em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
     }
 }
-
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{ @media {
-    .imgContainer {
-        width: 100%;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        margin-top: 0;
-    }
-}}
