@@ -42,10 +42,20 @@ function myFunction() {
         document.getElementById("layered-left").classList.remove("layered-left");
         document.getElementById("layered-right").classList.add("layered-right-push");
         document.getElementById("layered-right").classList.remove("layered-right");
-        document.getElementById("sun").classList.add("hidden-fast");
         document.getElementById("imgcontainer").style.width = "90%";
+        document.getElementById("sun").classList.add("hidden-fast");
+    }
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        // document.getElementById("sea2").style.fill = "red";
+        document.getElementById("sea2").classList.toggle("red");
+        console.log("500");
     }
     else {
-        // document.getElementById("background").classList.remove("scrollbackground");
+        document.getElementById("layered-left").classList.remove("layered-left-push");
+        document.getElementById("layered-left").classList.add("layered-left");
+        document.getElementById("layered-right").classList.remove("layered-right-push");
+        document.getElementById("layered-right").classList.add("layered-right");
+        document.getElementById("imgcontainer").style = " ";
+        document.getElementById("sun").classList.remove("hidden-fast");
     }
 }

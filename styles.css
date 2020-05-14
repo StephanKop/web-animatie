@@ -109,7 +109,7 @@ body {
 }
 
 .layered-left {
-    transition: all 10s ease;
+    /*transition: all 10s ease;*/
     opacity: 0;
     z-index: 20;
     /*background-color: yellow;*/
@@ -117,7 +117,7 @@ body {
 }
 
 .layered-right {
-    transition: all 10s ease;
+    /*transition: all 10s ease;*/
     opacity: 0;
     z-index: 30;
     /*background-color: red;*/
@@ -285,6 +285,10 @@ body {
 .visible {
     transition: all 10s ease;
     opacity: 1;
+}
+
+.red {
+    fill: red;
 }
 
 @media screen and (min-device-width: 300px) and (max-device-width: 812px){
