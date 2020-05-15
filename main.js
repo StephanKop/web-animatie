@@ -82,6 +82,7 @@ function myFunction() {
     else if (scroll >= 300) {
         document.getElementById("mars").classList.add("layered-left-push");
         document.getElementById("neptune").classList.add("layered-right-push");
+        document.getElementById("earth").classList.add("layered-middle-push");
         document.getElementById("sun").classList.add("hidden-fast");
         document.getElementById("imgcontainer").style.marginTop = "10em";
         console.log("400");

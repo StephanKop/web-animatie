@@ -276,7 +276,7 @@ body {
     opacity: 0;
     margin-left: 35%;
     font-family: "Apple SD Gothic Neo";
-    color: #003E74;
+    color: #004DD4;
 }
 
 .title-visible {
@@ -497,8 +497,8 @@ body {
         opacity: 1;
         z-index: 20;
         /*margin-left: 10em;*/
-        /*margin-top: 2em;*/
-        margin-bottom: 5em;
+        margin-top: -13em !important;
+        margin-bottom: 2em !important;
         /*margin-left: auto;*/
         /*margin-right: auto;*/
         width: 75%;
@@ -510,10 +510,14 @@ body {
         z-index: 20;
         margin-right: 0 !important;
         /*margin-right: 10em;*/
-        margin-top: 5em;
+        margin-top: 2em;
         /*margin-left: auto;*/
         /*margin-right: auto;*/
         width: 75%;
+    }
+
+    .layered-middle-push {
+        width: 51% !important;
     }
 
     .earth {
@@ -521,14 +525,93 @@ body {
     }
 
     .mars {
-        width: 50%;
+        margin-top: -10em;
+        width: 51%;
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
     .neptune {
-        width: 50%;
+        width: 51%;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    .neptune h2 {
+        margin-left: 25%;
+    }
+
+    .main-rocket {
+        opacity: 0;
+        width: 5em;
+        position: absolute;
+        z-index: -1;
+        /*margin-left: -40%;*/
+        margin-top: 20%;
+        transform: scale(0.5);
+        transform: rotate(-120deg);
+    }
+
+    .sub-rocket {
+        opacity: 0;
+        width: 5em;
+        position: absolute;
+        z-index: -1;
+        /*margin-left: -40%;*/
+        margin-top: 30%;
+        transform: scale(0.5);
+        transform: rotate(60deg);
+    }
+
+    @keyframes rocket1 {
+        0% {
+            transform: translate(0em, 0em) rotate(240deg) scale(0.5);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-10em, -5em) rotate(280deg);
+            opacity: 1;
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(0em, -10em) rotate(340deg) scale(0.5);
+            opacity: 0;
+        }
+    }
+
+    @keyframes rocket2 {
+        0% {
+            transform: translate(0em, 0em) rotate(60deg) scale(0.5);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(10em, 10em) rotate(90deg);
+            opacity: 1;
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(0em, 20em) rotate(120deg) scale(0.5);
+            opacity: 0;
+        }
+    }
+
+    .rocket-anim {
+        transition: all 2s ease;
+        animation: rocket1 2s ease-in-out;
+    }
+
+    .rocket-sub-anim {
+        transition: all 2s ease;
+        animation: rocket2 2s ease-in-out;
     }
 }
