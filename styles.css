@@ -75,14 +75,14 @@ body {
     background-color: #3c88b3;
 }
 
-#sea1:hover {
-    width: 200%;
+#sea1 {
+    /*width: 200%;*/
     animation: seaSkew1 5s infinite;
     transform-origin: 100% 60%;
 }
 
-#sea1:hover ~ #sea2{
-    width: 200%;
+#sea2{
+    /*width: 200%;*/
     animation: seaSkew2 5s infinite;
     transform-origin: 100% 60%;
 }
@@ -120,24 +120,6 @@ body {
         transform-origin: 100% 60%;
     }
 }
-
-/*.layered-left {*/
-    /*transition: all 10s ease;*/
-    /*opacity: 1;*/
-    /*z-index: 20;*/
-    /*background-color: yellow;*/
-    /*margin-right: -40.5em;*/
-    /*display: none;*/
-/*}*/
-
-/*.layered-right {*/
-    /*transition: all 10s ease;*/
-    /*opacity: 1;*/
-    /*z-index: 30;*/
-    /*background-color: red;*/
-    /*margin-left: -40.5em;*/
-    /*display: none;*/
-/*}*/
 
 #layered-middle {
     z-index: 10;
@@ -222,9 +204,9 @@ body {
     width: 100%;
 }
 
-/*#sea1 {*/
-/*    transform: translateY(20%);*/
-/*}*/
+#sea1 {
+    transform: translateY(20%);
+}
 
 .mars {
     transition: all 2s ease;
@@ -234,7 +216,13 @@ body {
     opacity: 0;
     display: flex;
     flex-direction: column;
+    outline:none;
 }
+
+/*.mars:hover {*/
+/*    transition: all 0.5s ease;*/
+/*    transform: scale(1.2);*/
+/*}*/
 
 .mars h2 {
     transition: all 2s ease;
@@ -261,6 +249,11 @@ body {
     color: #3C88B3;
 }
 
+/*.earth:hover {*/
+/*    transition: all 0.5s ease;*/
+/*    transform: scale(1.2);*/
+/*}*/
+
 .neptune {
     transition: all 2s ease;
     margin-left: -55%;
@@ -278,6 +271,11 @@ body {
     font-family: "Apple SD Gothic Neo";
     color: #004DD4;
 }
+
+/*.neptune:hover {*/
+/*    transition: all 0.5s ease;*/
+/*    transform: scale(1.2);*/
+/*}*/
 
 .title-visible {
     opacity: 1 !important;
@@ -361,6 +359,79 @@ body {
     opacity: 1;
 }
 
+.hidden-flag {
+    display: none;
+    transition: all 2s ease;
+}
+
+@keyframes flag {
+    0% {
+        transform-origin: bottom left ;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform-origin: bottom left ;
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform-origin: bottom left ;
+        transform: rotate(0deg);
+    }
+}
+
+.visible-flag {
+    /*animation: flag 2s infinite;*/
+    display: flex;
+    position: absolute;
+    width: 4em;
+    margin-left: 12%;
+    margin-top: 6%;
+    z-index: -10;
+}
+
+@keyframes flagWave {
+    0% {
+        transform-origin: left ;
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform-origin: left ;
+        transform: skewY(10deg);
+    }
+
+    100% {
+        transform-origin: left ;
+        transform: skewY(0deg);
+    }
+}
+
+@keyframes waveRise {
+    0% {
+        transform: translateY(3em);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0em);
+        opacity: 1;
+    }
+}
+
+#flag {
+    animation: flagWave 2s infinite;
+}
+
+#mars-flag {
+    animation: waveRise 2s ease;
+}
+
+#neptune-flag {
+    animation: waveRise 2s ease;
+}
+
 .red {
     fill: red;
 }
@@ -439,6 +510,57 @@ body {
     animation: rocket2 2s ease-in-out;
 }
 
+@keyframes vibrate {
+    0% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+    10% {
+        transform: rotate(10deg);
+        opacity: 0.75;
+    }
+    20% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+    30% {
+        transform: rotate(10deg);
+        opacity: 0.75;
+    }
+    40% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(10deg);
+        opacity: 0.75;
+    }
+
+    60% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+    70% {
+        transform: rotate(10deg);
+        opacity: 0.75;
+    }
+    80% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+    90% {
+        transform: rotate(10deg);
+        opacity: 0.75;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.selected {
+    animation: vibrate 1s ease;
+}
 
 
 @media screen and (min-device-width: 300px) and (max-device-width: 812px){

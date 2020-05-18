@@ -32,46 +32,18 @@ function sunrise() {
     document.getElementById("sun").classList.remove("sunset");
 };
 
-// document.getElementById("background").addEventListener("scroll", onscroll);
-
 window.onscroll = function() {myFunction()};
-
-// function myFunction() {
-//     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-//         document.getElementById("layered-left").classList.add("layered-left-push");
-//         document.getElementById("layered-left").classList.remove("layered-left");
-//         document.getElementById("layered-right").classList.add("layered-right-push");
-//         document.getElementById("layered-right").classList.remove("layered-right");
-//         document.getElementById("imgcontainer").style.width = "90%";
-//         document.getElementById("sun").classList.add("hidden-fast");
-//         console.log("400");
-//     }
-//     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-//         // document.getElementById("sea2").style.fill = "red";
-//         document.getElementById("sea2").classList.toggle("red");
-//         console.log("700");
-//     }
-//     else {
-//         document.getElementById("layered-left").classList.remove("layered-left-push");
-//         document.getElementById("layered-left").classList.add("layered-left");
-//         document.getElementById("layered-right").classList.remove("layered-right-push");
-//         document.getElementById("layered-right").classList.add("layered-right");
-//         document.getElementById("imgcontainer").style = " ";
-//         document.getElementById("sun").classList.remove("hidden-fast");
-//     }
-// }
 
 function myFunction() {
     let scroll = document.scrollingElement.scrollTop;
-    // console.log(scroll);
 
-    if (scroll >= 1000) {
-        console.log("1000");
+    if (scroll >= 1300) {
+        console.log("1300");
     }
-    else if (scroll >= 900) {
+    else if (scroll >= 1200) {
     document.getElementById("sub-rocket").classList.add("rocket-sub-anim");
     }
-    else if (scroll >= 800) {
+    else if (scroll >= 900) {
         document.getElementById("main-rocket").classList.add("rocket-anim");
     }
     else if (scroll >= 600) {
@@ -85,7 +57,6 @@ function myFunction() {
         document.getElementById("earth").classList.add("layered-middle-push");
         document.getElementById("sun").classList.add("hidden-fast");
         document.getElementById("imgcontainer").style.marginTop = "10em";
-        console.log("400");
     }
     else {
         document.getElementById("mars").classList.remove("layered-left-push");
@@ -97,3 +68,39 @@ function myFunction() {
         document.getElementById("sun").classList.remove("hidden-fast");
     }
 }
+
+document.getElementById("mars").addEventListener("click", battleMars);
+
+function battleMars() {
+    document.querySelector(".mars").classList.toggle("selected");
+    document.querySelector("#mars-title").innerHTML = "Press p to conquer";
+    document.querySelector("#layered-left").setAttribute("id", "selected-mars")
+}
+
+document.getElementById("neptune").addEventListener("click", battleNeptune);
+function battleNeptune() {
+    document.querySelector("#layered-right").classList.toggle("selected");
+    document.querySelector("#neptune-title").innerHTML = "Press p to conquer";
+    document.querySelector("#layered-right").setAttribute("id", "selected-neptune");
+}
+
+// window.addEventListener("keypress", keyPress);
+document.getElementById("mars").addEventListener("keydown", keyPressMars);
+
+function keyPressMars(e) {
+    let keyCode = e.keyCode;
+    if (keyCode === 80) {
+        document.querySelector("#mars-flag").classList.toggle("visible-flag");
+        document.querySelector("#mars-title").innerHTML = "Mars colony";
+    }
+}
+
+document.getElementById("neptune").addEventListener("keydown", keyPressNeptune);
+function keyPressNeptune(e) {
+    let keyCode = e.keyCode;
+    if (keyCode === 80) {
+        document.querySelector("#neptune-flag").classList.toggle("visible-flag");
+        document.querySelector("#neptune-title").innerHTML = "Neptune colony";
+    }
+}
+
