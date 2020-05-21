@@ -104,3 +104,16 @@ function keyPressNeptune(e) {
     }
 }
 
+document.getElementById("mars").addEventListener("long-press", LongPressMars);
+function LongPressMars(e) {
+    document.querySelector("#mars-flag").classList.toggle("visible-flag");
+    document.querySelector("#mars-title").innerHTML = "Mars colony";
+}
+
+document.getElementById("neptune").addEventListener("long-press", LongPressNeptune);
+function LongPressNeptune(e) {
+    document.querySelector("#neptune-flag").classList.toggle("visible-flag");
+    document.querySelector("#neptune-title").innerHTML = "Neptune colony";
+}
+
+
