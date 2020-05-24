@@ -36,10 +36,11 @@ window.onscroll = function() {scrollAnimation()};
 function scrollAnimation() {
     let scroll = document.scrollingElement.scrollTop;
     if (scroll >= 1300) {
-        console.log("1300");
+        document.getElementById("main-rocket").classList.remove("rocket-anim");
+        document.getElementById("sub-rocket").classList.remove("rocket-sub-anim");
     }
     else if (scroll >= 1200) {
-    document.getElementById("sub-rocket").classList.add("rocket-sub-anim");
+        document.getElementById("sub-rocket").classList.add("rocket-sub-anim");
     }
     else if (scroll >= 900) {
         document.getElementById("main-rocket").classList.add("rocket-anim");
@@ -48,6 +49,8 @@ function scrollAnimation() {
         document.getElementById("mars-title").classList.add("title-visible");
         document.getElementById("earth-title").classList.add("title-visible");
         document.getElementById("neptune-title").classList.add("title-visible");
+        document.getElementById("main-rocket").classList.remove("rocket-anim");
+        document.getElementById("sub-rocket").classList.remove("rocket-sub-anim");
     }
     else if (scroll >= 300) {
         document.getElementById("mars").classList.add("layered-left-push");
