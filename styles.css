@@ -409,18 +409,6 @@ body {
     animation: starsFlicker 1s infinite alternate;
 }
 
-.animate-flicker2 {
-    animation: starsFlicker 2s infinite alternate;
-}
-
-.animate-flicker3 {
-    animation: starsFlicker 3s infinite alternate;
-}
-
-.animate-flicker4 {
-    animation: starsFlicker 4s infinite alternate;
-}
-
 .stars {
     display: flex;
     flex-wrap: wrap;

@@ -1,6 +1,9 @@
 # Artwork inpsiration: 
 ![Artwork](https://github.com/superstephan1/web-animatie/blob/master/assets/artwork.jpg)
 
+### link:
+https://superstephan1.github.io/web-animatie/
+
 ### style
 
 The original artwork is created by Flatowl. A london based design studio. As you can see i diverted a lot from the original artwork. I decided to skip the texture of the original 
@@ -26,5 +29,5 @@ I came to the conclusion that completely rewriting the rocket animations in the 
 
 ### Understanding
 
-The logic of the artwork is mainly handled in js. Most of the work is done by toggling, adding and deleting classes from id's with different eventlisteners.
+The logic of the artwork is mainly handled in js. Most of the work is done by toggling, adding and deleting classes from id's with different eventlisteners and the stars are rendered via a for loop.
 The most interesting thing i learned during this project is that classlist.toggle is useless when used in if statements that check scrolling postions. The classlist.toggle, toggles on every pixel that meets the if statement's requirement, so your animations get kinda "wonky".
