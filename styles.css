@@ -18,8 +18,6 @@ body {
 .cls-3-1{fill:#ffb05f;}
 .cls-4-1{fill:#d48900;}
 
-/*mars svg animatie*/
-
 /*earth svg*/
 .cls-1-2{fill:#5d6160;}
 .cls-2-2{fill:#3c88b3;}
@@ -27,16 +25,12 @@ body {
 .cls-3-2{fill:#5a7477;}
 .cls-4-2{fill:#a5e5d8;}
 
-/*!*earth animatie*!*/
-
 /*neptune svg*/
 .cls-1-3{fill:#003e74;}
 .cls-2-3{fill:#0035bf;}
 .cls-2-3,.cls-4-3{opacity:0.4;isolation:isolate;}
 .cls-3-3{fill:#004dd4;}
 .cls-4-3{fill:#006494;}
-
-/*neptune svg animatie*/
 
 
 /*dutch flag svg*/
@@ -180,10 +174,8 @@ body {
     display: flex;
     justify-content: center;
     transition: all 1s ease;
-    /*width: 45%;*/
     width: 90%;
     min-height: 35em;
-    /*height: 70%;*/
     position: fixed;
     margin-top: 5em;
     z-index: 1;
@@ -275,28 +267,21 @@ body {
     transition: all 2s ease;
     opacity: 1 !important;
     z-index: 20;
-    /*position: relative;*/
     margin-right: 10.5em !important;
     margin-top: -5em;
-    /*transform: scale(0.5);*/
-    /*display: flex !important;*/
 }
 
 .layered-right-push {
     transition: all 2s ease;
     opacity: 1 !important;
     z-index: 20;
-    /*position: relative;*/
     margin-left: 10.5em !important;
     margin-top: -5em;
-    /*transform: scale(0.5);*/
-    /*display: flex !important;*/
 }
 
 .maincontainer {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
     height: 140em;
 }
@@ -358,17 +343,11 @@ body {
     transition: all 2s ease;
     margin-right: -55%;
     width: 45%;
-    /*display: none;*/
     opacity: 0;
     display: flex;
     flex-direction: column;
     outline:none;
 }
-
-/*.mars:hover {*/
-/*    transition: all 0.5s ease;*/
-/*    transform: scale(1.2);*/
-/*}*/
 
 .mars h2 {
     transition: all 2s ease;
@@ -418,11 +397,6 @@ body {
     color: #004DD4;
 }
 
-/*.neptune:hover {*/
-/*    transition: all 0.5s ease;*/
-/*    transform: scale(1.2);*/
-/*}*/
-
 .title-visible {
     opacity: 1 !important;
 }
@@ -451,14 +425,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /*height: 100%;*/
     height: 60em;
     justify-content: center;
     margin-top: -35em;
     position: fixed;
 }
 
-.star1 {
+.star:nth-child(odd) {
+    animation: starsFlicker 1s infinite alternate;
     background-color: white;
     width: 0.5em;
     height: 0.5em;
@@ -466,27 +440,12 @@ body {
     border-radius: 10em;
 }
 
-.star2 {
+.star:nth-child(even) {
+    animation: starsFlicker 5s infinite alternate;
     background-color: white;
     width: 0.5em;
     height: 0.5em;
     margin: 5em 5em 5em 5em;
-    border-radius: 10em;
-}
-
-.star3 {
-    background-color: white;
-    width: 0.5em;
-    height: 0.5em;
-    margin: 10em 5em 10em 5em;
-    border-radius: 10em;
-}
-
-.star4 {
-    background-color: white;
-    width: 0.5em;
-    height: 0.5em;
-    margin: 13em 5em 13em 5em;
     border-radius: 10em;
 }
 
@@ -528,7 +487,6 @@ body {
 }
 
 .visible-flag {
-    /*animation: flag 2s infinite;*/
     display: flex;
     position: absolute;
     width: 4em;
@@ -743,31 +701,20 @@ body {
         transform: translate(6em, 10em);
     }
 
-    .star1 {
+    .star:nth-child(odd) {
         margin: 2em 4em 2em 4em;
     }
 
-    .star2 {
+    .star:nth-child(even) {
         margin: 4em 2em 4em 2em;
-    }
-
-    .star3 {
-        margin: 3em 5em 3em 5em;
-    }
-
-    .star4 {
-        margin: 1em 2em 1em 2em;
     }
 
     .layered-left-push {
         transition: all 2s ease;
         opacity: 1;
         z-index: 20;
-        /*margin-left: 10em;*/
         margin-top: -13em !important;
         margin-bottom: 2em !important;
-        /*margin-left: auto;*/
-        /*margin-right: auto;*/
         width: 75%;
     }
 
@@ -776,10 +723,7 @@ body {
         opacity: 1;
         z-index: 20;
         margin-right: 0 !important;
-        /*margin-right: 10em;*/
         margin-top: 1em;
-        /*margin-left: auto;*/
-        /*margin-right: auto;*/
         width: 75%;
     }
 
@@ -813,7 +757,6 @@ body {
         width: 5em;
         position: absolute;
         z-index: -1;
-        /*margin-left: -40%;*/
         margin-top: 20%;
         transform: scale(0.5);
         transform: rotate(-120deg);
@@ -824,7 +767,6 @@ body {
         width: 5em;
         position: absolute;
         z-index: -1;
-        /*margin-left: -40%;*/
         margin-top: 30%;
         transform: scale(0.5);
         transform: rotate(60deg);

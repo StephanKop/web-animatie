@@ -1,5 +1,10 @@
-document.getElementById("sunset").addEventListener("click", addSunset);
+window.onload = function renderStars() {
+    for (let i = 0; i < 100; i++) {
+        document.getElementById("stars").innerHTML += "<div class='star'></div>";
+    }
+};
 
+document.getElementById("sunset").addEventListener("click", addSunset);
 function addSunset() {
     document.getElementById("sun").classList.add("sunset");
     setTimeout(moonrise, 3000);
@@ -10,7 +15,6 @@ function addSunset() {
 };
 
 document.getElementById("sunrise").addEventListener("click", addSunrise);
-
 function addSunrise() {
     document.getElementById("moon").classList.remove("moonrise");
     setTimeout(sunrise, 3000);
@@ -28,11 +32,9 @@ function sunrise() {
     document.getElementById("sun").classList.remove("sunset");
 };
 
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
+window.onscroll = function() {scrollAnimation()};
+function scrollAnimation() {
     let scroll = document.scrollingElement.scrollTop;
-
     if (scroll >= 1300) {
         console.log("1300");
     }
@@ -53,7 +55,6 @@ function myFunction() {
         document.getElementById("earth").classList.add("layered-middle-push");
         document.getElementById("sun").classList.add("hidden-fast");
         document.getElementById("imgcontainer").style.marginTop = "10em";
-        // remove titles
         document.getElementById("mars-title").classList.remove("title-visible");
         document.getElementById("earth-title").classList.remove("title-visible");
         document.getElementById("neptune-title").classList.remove("title-visible");
