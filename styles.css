@@ -895,6 +895,18 @@ body {
         animation: none;
     }
 
+    .ufo-container-mars {
+        display: none;
+    }
+
+    .ufo-container-neptune {
+        display: none;
+    }
+
+    .fish-container {
+        display: none;
+    }
+
     #fish1 {
         animation: none;
         padding-top: 0;

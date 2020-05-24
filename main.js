@@ -61,11 +61,15 @@ function myFunction() {
     else {
         document.getElementById("mars").classList.remove("layered-left-push");
         document.getElementById("neptune").classList.remove("layered-right-push");
+        document.getElementById("earth").classList.remove("layered-middle-push");
         document.getElementById("mars-title").classList.remove("title-visible");
         document.getElementById("earth-title").classList.remove("title-visible");
         document.getElementById("neptune-title").classList.remove("title-visible");
         document.getElementById("imgcontainer").style = " ";
         document.getElementById("sun").classList.remove("hidden-fast");
+        document.querySelector("#mars-flag").classList.remove("visible-flag");
+        document.querySelector("#neptune-flag").classList.remove("visible-flag");
+
     }
 }
 
